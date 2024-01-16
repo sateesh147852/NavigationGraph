@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.navigationgraph.ui.LoginFragment"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/login_to_home_fragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.navigationgraph.ui.HomeFragment"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/home_to_transaction"
+            app:destination="@id/transactionFragment" />
+
+        <action
+            android:id="@+id/home_to_recipient"
+            app:destination="@id/recipientFragment" />
+
+        <action
+            android:id="@+id/home_to_viewBalance"
+            app:destination="@id/viewBalanceFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/transactionFragment"
+        android:name="com.navigationgraph.ui.TransactionFragment"
+        tools:layout="@layout/fragment_transaction" />
+
+    <fragment
+        android:id="@+id/recipientFragment"
+        android:name="com.navigationgraph.ui.RecipientFragment"
+        tools:layout="@layout/fragment_recipient">
+
+        <action
+            android:id="@+id/recipent_to_specifyAmount"
+            app:destination="@id/specifyAmountFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/viewBalanceFragment"
+        android:name="com.navigationgraph.ui.ViewBalanceFragment"
+        tools:layout="@layout/fragment_view_balance" />
+
+    <fragment
+        android:id="@+id/specifyAmountFragment"
+        android:name="com.navigationgraph.ui.SpecifyAmountFragment"
+        tools:layout="@layout/fragment_specify_amount">
+
+        <action
+            android:id="@+id/specify_amount_to_confirmation"
+            app:destination="@id/confirmationFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/confirmationFragment"
+        android:name="com.navigationgraph.ui.ConfirmationFragment"
+        tools:layout="@layout/fragment_confirmation" />
+
+</navigation>
