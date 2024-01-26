@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/group1">
+
+        <item
+            android:id="@+id/homeFragment"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/chatFragment"
+            android:icon="@drawable/ic_chat"
+            android:title="Chat" />
+
+        <item
+            android:id="@+id/settingsFragment"
+            android:icon="@drawable/ic_settings"
+            android:title="Settings" />
+
+    </group>
+
+        <item android:title="SubCategory">
+
+            <menu >
+
+                <item
+                    android:id="@+id/editAccountFragment"
+                    android:icon="@drawable/ic_account"
+                    android:title="Account" />
+
+                <item
+                    android:id="@+id/menuFragment"
+                    android:icon="@drawable/ic_menu"
+                    android:title="Menu" />
+
+            </menu>
+
+        </item>
+
+
+</menu>

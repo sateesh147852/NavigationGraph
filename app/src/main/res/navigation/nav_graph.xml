@@ -31,5 +31,16 @@
         android:name="com.navigationgraph.ui.EditAccountFragment"
         tools:layout="@layout/fragment_edit_account" />
 
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.navigationgraph.ui.MenuFragment"
+        tools:layout="@layout/fragment_menu">
+
+    <action
+        android:id="@+id/menuFragment_to_editAccountFragment"
+        app:destination="@id/editAccountFragment" />
+
+    </fragment>
+
 
 </navigation>
