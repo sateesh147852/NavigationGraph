@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.navigationgraph.ui.HomeFragment"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/home_to_account_fragment"
+            app:destination="@id/accountFragment" />
+
+        <action
+            android:id="@+id/home_to_edit_Account"
+            app:destination="@+id/editAccountDialog" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.navigationgraph.ui.AccountFragment"
+        tools:layout="@layout/fragment_account" />
+
+    <dialog
+        android:id="@+id/editAccountDialog"
+        android:name="com.navigationgraph.ui.EditAccountFragment"
+        tools:layout="@layout/fragment_edit_account">
+
+        <action
+            android:id="@+id/edit_Account_dialog_to_second_activity"
+            app:destination="@id/SecondActivity"
+            app:popUpTo="@id/editAccountDialog"
+            app:popUpToInclusive="true" />
+
+    </dialog>
+
+    <activity
+        android:id="@+id/SecondActivity"
+        android:name="com.navigationgraph.ui.SecondActivity"
+        tools:layout="@layout/activity_second" />
+    
+
+</navigation>
