@@ -26,7 +26,7 @@ class SecondFragment : Fragment() {
         binding.tvNext.setOnClickListener {
             activity?.let {
                 val viewPager2 : ViewPager2 = it.findViewById(R.id.viewPager2)
-                viewPager2.currentItem = 1
+                viewPager2.currentItem = 2
             }
         }
     }
