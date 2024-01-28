@@ -6,4 +6,5 @@
     </style>
 
     <style name="Theme.NavigationGraph" parent="Base.Theme.NavigationGraph" />
+
 </resources>
